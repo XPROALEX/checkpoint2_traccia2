@@ -1,10 +1,12 @@
-Car(
-id VARCHAR(255) PRIMARY KEY,
+Cat(
+microchipCode VARCHAR(255) PRIMARY KEY,
+fullName VARCHAR(64),
 nickname VARCHAR(64),
-speed INTEGER,
-productionYear INTEGER
+age INTEGER,
 )
-INSERT INTO Car VALUES('abc','random car',100,2010);
-SELECT productionYear,COUNT(*) AS Car_Count FROM Car GROUP BY productionYear;
-SELECT * FROM Car WHERE speed>200;
-SELECT nickname,speed FROM Car WHERE nickname IS NOT NULL;
+Write the following queries:
+1. Insert a Cat entry with random values.
+2. Report the count of cats that have a certain age, for each age value present in the
+table.
+3. Select all cats older than 10.
+4. Select all cats without a nickname
