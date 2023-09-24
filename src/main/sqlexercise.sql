@@ -4,9 +4,7 @@ fullName VARCHAR(64),
 nickname VARCHAR(64),
 age INTEGER,
 )
-Write the following queries:
-1. Insert a Cat entry with random values.
-2. Report the count of cats that have a certain age, for each age value present in the
-table.
-3. Select all cats older than 10.
-4. Select all cats without a nickname
+INSERT INTO Cat VALUES("abc","Silvestro","Gatto",11);
+SELECT age,COUNT(*) AS catsCount FROM Cat GROUP BY age
+SELECT * FROM Cat WHERE age>10;
+SELECT * FROM Cat WHERE nickname IS NULL;
